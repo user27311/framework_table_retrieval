@@ -1,0 +1,13 @@
+FROM python:3.10
+WORKDIR /app
+
+COPY scripts/trec_covid/download_trec_covid_openalex.py .
+COPY src ./package/
+COPY pyproject.toml ./package/
+COPY requirements.txt ./package/
+
+RUN pip install -r package/requirements.txt
+
+RUN pip install ./package/
+
+ENTRYPOINT ["python", "-u", "download_trec_covid_openalex.py"]

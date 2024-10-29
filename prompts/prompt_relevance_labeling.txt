@@ -1,0 +1,33 @@
+Topic: Query: {QUERY} Question: {QUESTION} Narrative: {NARRATIVE}
+
+Table: Table Content with header: {CONTENT} Table Caption: {CAPTION}
+
+Role: You are an expert in evaluating the relevance of tables.
+
+Objective: Determine the relevance of the provided table data in relation to the given topic, query, question, and narrative.
+
+Criteria for Relevance:
+
+A relevant table must directly answer at least part of the question.
+The table should be specifically related to the exact virus, medication, or topic mentioned.
+Ignore tables that are about different but similar topics, make sure that the table is really relevant.
+Avoid overinterpretation: Do not assume relevance based on superficial similarities.
+
+Relevance Levels:
+
+0: Not Relevant
+The table does not answer the question or provide too little insight.
+The table is about a different topic, virus, or disease (also consider the table caption for this).
+ 
+1: Relevant
+The table partially answers the question.
+The table provides some relevant information but is not comprehensive.
+
+2: Highly Relevant
+The table directly and fully answers the question.
+The table provides comprehensive and specific information related to the query.
+
+Instructions:
+
+Your answer should only be the number indicating the relevance (0, 1, or 2).
+Do not include any additional text or explanation.

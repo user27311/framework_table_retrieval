@@ -1,0 +1,12 @@
+FROM python:3.10-bullseye
+
+COPY src .
+COPY scripts/trec_covid/download_trec_covid_wiley.py .
+COPY requirements.txt .
+COPY pyproject.toml .
+COPY .env .
+
+RUN pip install -r requirements.txt
+RUN pip install -e .
+
+ENTRYPOINT [ "python", "-u", "download_trec_covid_wiley.py"]

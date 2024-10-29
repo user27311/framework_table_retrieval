@@ -1,0 +1,9 @@
+version: "3"
+services:
+
+  papermage:
+    image: papermage
+    volumes: 
+        - ../../CORD19_Plus:/workspaces
+        
+    tty: true

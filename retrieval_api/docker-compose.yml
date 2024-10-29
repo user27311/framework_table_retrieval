@@ -1,0 +1,10 @@
+services:
+
+  arts:
+    image: retrieval_api
+    ports:
+      - "8082:8082"
+    volumes: 
+        - ./app:/app
+        
+    tty: true

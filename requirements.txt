@@ -1,0 +1,13 @@
+papermage[dev,predictors,visualizers]
+requests
+python-dotenv
+autoqrels @ git+https://github.com/seanmacavaney/autoqrels@main
+tiktoken
+openai
+opencv-python
+ir_datasets
+pymupdf
+#relevance-labels
+bs4
+langchain
+langchain_openai

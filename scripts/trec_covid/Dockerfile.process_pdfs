@@ -1,0 +1,10 @@
+FROM python:3.10-bullseye
+RUN apt update
+RUN apt install ffmpeg libsm6 libxext6 libpoppler-dev poppler-utils -y --no-install-recommends
+RUN pip install papermage[dev,predictors,visualizers] python-dotenv
+COPY src/ src/
+COPY pyproject.toml pyproject.toml
+RUN pip install -e .
+
+COPY process_pdfs.py process_pdfs.py
+ENTRYPOINT [ "python", "-u", "process_pdfs.py" ]
